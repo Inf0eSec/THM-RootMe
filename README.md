@@ -6,7 +6,7 @@ RootMe>_ is a CTF for beginners to practice all the basic steps in pentesting us
 
 
 
-**Task 1 - Deploy the machine
+**Task 1 - Deploy the machine**
 
   Without further a-do let's get started and deploy that machine!
 
@@ -14,34 +14,34 @@ RootMe>_ is a CTF for beginners to practice all the basic steps in pentesting us
 
 The first stage in any attack is to garner as much information on your target as you can through reconnaissance. The first question in this task points directly to conducting a port scan on the target machine to discover any open ports. This can be achieved using namp and depending on the flags set in the command can determine the information returned. Looking down further on through the questions in this task we are asked for the version of apache running on this machine as well as the service running on port 22.  Already we have some clues as to the ports that maybe open on this target without touching it.  
 
-  *Q. Scan the machine, how many ports are open?
+  *Q. Scan the machine, how many ports are open?*
 
   We can set this scan up in a number of ways.  Thinking ahead on the questions I decided to opt for -sV (Verbose) flag during this scan to pull as much information     from the target as I could. 
 
-  *Q. What version of apache is running?
+  *Q. What version of apache is running?*
 
-  *Q. What service is running on port 22?
+  *Q. What service is running on port 22?*
 
-  *Q. Find directories on the web server using the GoBuster tool. 
+  *Q. Find directories on the web server using the GoBuster tool.* 
 
-  *Q. What is the hidden directory?
-
-
+  *Q. What is the hidden directory?*
 
 
-**Tak 3 - Getting a shell
 
-  Find a form to upload and get a reverse shell and find the flag.
 
-  *Q. User.txt?
+**Tak 3 - Getting a shell**
 
-**Task 4 - Privilege escalation
+  Find a form to upload and get a reverse shell and find the flag.*
+
+  *Q. User.txt?*
+
+**Task 4 - Privilege escalation*
 
   Now that we have shell, let's escalte our privieges to root.
 
-  *Q. Search for files with SUID permission, which file is weird?
+  *Q. Search for files with SUID permission, which file is weird?*
 
-  *Q. Find a form to escalate your privileges
+  *Q. Find a form to escalate your privileges*
 
-  *Q. root.txt
+  *Q. root.txt*
 
