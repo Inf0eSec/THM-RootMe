@@ -8,11 +8,15 @@ RootMe>_ is a CTF for beginners to practice all the basic steps in pentesting us
 
 Task 1 - Deploy the machine
 
-
+Without furthe ado let's get started and deploy that machine!
 
 Task 2 - Reconnaissance
 
+The first stage in any attack is to garner as much information on your target as you can through reconnaissance. The first question in this task points directly to conducting a port scan on the target machine to discover any open ports. This can be achieved using namp and depending on the flags set in the command can determine the information returned.
+
 Q. Scan the machine, how many ports are open?
+
+
 
 Q. What version of apache is running?
 
