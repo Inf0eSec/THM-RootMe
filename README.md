@@ -35,7 +35,7 @@ The first stage in any attack is to garner as much information on your target as
 
   *Q. User.txt?*
 
-**Task 4 - Privilege escalation*
+**Task 4 - Privilege escalation**
 
   Now that we have shell, let's escalte our privieges to root.
 
