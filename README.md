@@ -38,7 +38,7 @@ The first stage in the **attack** is to gather as much information on the target
   
   *A. SSH*
   
-  Conduct further enumeration to uncover the directories on this web server, run a Gobuster scan:
+  Conducting further enumeration this will uncover the directories on this web server by running a Gobuster scan:
   
       ~#gobuster dir -u http://[IP Address] -w /usr/share/wordlists/dirb/common.txt -x php,phtml,php3 
    
@@ -56,7 +56,7 @@ The first stage in the **attack** is to gather as much information on the target
 
   **Find a form to upload and get a reverse shell and find the flag.**
   
-From the gobuster scan we can see this web server uses php code therefore we need a **php-reverse-shell** to gain a foothold. Conducting a quick search on github our good friend the **pentestmonkey** has kindly provided this for us to download already. 
+From the gobuster scan we can see this web-server uses php code therefore we need a **php-reverse-shell** to gain a foothold. Conducting a quick search on github our good friend the **pentestmonkey** has kindly provided this for us to download already. 
 
 ![php reverse shell](https://user-images.githubusercontent.com/100538982/164943135-21d0283f-0bc4-43ab-9100-bd6d2681073d.png)
 
@@ -64,23 +64,24 @@ Before uploading this payload to the web server we need to append the attack mac
 
 ![shell code](https://user-images.githubusercontent.com/100538982/164943162-f410ade5-4300-4888-8309-2d79ebf6e541.png)
 
-Having saved our reverse-shell code we navigate to to the web site IP address via the browser:  http://[IP Address/]
+Having saved our reverse-shell code, we navigate to the web site IP address via the browser:  http://[IP Address/]
 
 ![web page](https://user-images.githubusercontent.com/100538982/164943641-e183a488-beb6-460d-bf66-afbce237bda6.png)
 
-Appending the hidden sub-directory (/panel) to the IP Address we discover there is an upload function for documents to this web server. Using "browse" we can locate our shell file on the attack machine, and upload it to the target. If the upload doesn't work first time, then maybe try a different file extension for the reverse-shell file... 
+Appending the hidden sub-directory (/panel) to the IP Address we discover there is an upload function for documents to this web server. Using "browse" we can locate our shell file on the attack machine, and upload it to the target. If the upload doesn't work first time, then maybe try a different file extension for the reverse-shell file instead... 
 
 ![panel upload](https://user-images.githubusercontent.com/100538982/164943710-6a79e564-64fb-4f5e-bbad-9aca31f3eea7.png)
 
-Prior to executing our payload to get a reverse shell, we first need to set up a netcat listener in the terminal:
+Prior to executing our payload to gain a reverse shell, we first need to set up a netcat listener in the terminal window:
 
     ~# nc -lnvp [port]
 
-I used the default port in the reverse-shell code: "1234". Navigating to http://[IP Address/uploads/] from the browser, click on the shell file to run the code. This should establish the shell with a prompt: **"$"**. To further test the shell:
+I used the default port in the reverse-shell code: "1234". Navigating to the uploads directory: http://[IP Address/uploads/] from the browser, click on the shell file to run the code. This should establish the reverse shell with a prompt: **"$"**. To further test the shell:
+
+  ~#whoami
+  ~#pwd
 
 ![get shell](https://user-images.githubusercontent.com/100538982/164944149-f0f1c4c3-6237-4057-9eb1-a216b3cb9ec6.png)
-
-    ~#whoami
 
 Finding the first flag can be achieved either by conducting a search using the "find" command or manually trawling through the directories.
 
