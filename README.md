@@ -1,6 +1,6 @@
 
-# THM-RootMe write-up
-**CTF > RootMe Write-up**
+# THM-RootMe write-up#
+**CTF >_ RootMe Write-up**
 
 https://tryhackme.com/room/rrootme
 
