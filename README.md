@@ -11,6 +11,9 @@ This CTF allows the player to practice their skills using several tools and tech
   Without further a-do let's get started and deploy that machine!
   
   
+  
+  ![deploy](https://user-images.githubusercontent.com/100538982/164940287-dc7117d9-8ad2-4a05-abb2-600f6494ab63.png)
+
 
 **Task 2 - Reconnaissance**
 
