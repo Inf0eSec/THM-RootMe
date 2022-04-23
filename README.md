@@ -17,12 +17,13 @@ This CTF allows the player to practice their skills using several tools and tech
 
 **Task 2 - Reconnaissance**
 
-The first stage in any attack is to garner as much information on your target as you can through reconnaissance. The first question in this task points directly to conducting a port scan on the target machine to discover any open ports and live services. Looking down further on through the questions for this task we are asked for the version of apache running on this machine as well as the service running on port 22.  Already we have some clues as to the ports that maybe open on this target without actually touching it.  
+The first stage in **attack** is to gather as much information on the target through reconnaissance. Reading through the first question in this task points directly to conducting a port scan on the target machine to discover any open ports and live services. 
 
   *Q. Scan the machine, how many ports are open?*
+  
+$>  
 
-
- 
+![nmap](https://user-images.githubusercontent.com/100538982/164941609-a051a910-658c-4227-a1c6-65bdc1c4e6dc.png)
 
   *Q. What version of apache is running?*
   
