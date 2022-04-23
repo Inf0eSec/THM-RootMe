@@ -2,6 +2,8 @@
 # THM-RootMe write-up
 **CTF > RootMe Write-up**
 
+https://tryhackme.com/room/rrootme
+
 
 RootMe>_ is a CTF for beginners to carry out all the basic steps in an attack using a linux machine as a target. The aim of this exercise is to gain root privileges and grab the flag > **root.txt** 
 
