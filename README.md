@@ -36,7 +36,7 @@ The first stage in the **attack** is to gather as much information on the target
   
   *A. SSH*
   
-  Conducting further enumeration to uncover the directories on this web server let's run a Gobuster scan:
+  Conduct further enumeration to uncover the directories on this web server, run a Gobuster scan:
   
       ~#gobuster dir -u http://[IP Address] -w /usr/share/wordlists/dirb/common.txt -x php,phtml,php3 
    
@@ -62,11 +62,11 @@ Before uploading this payload to the web server we need to append the attack mac
 
 ![shell code](https://user-images.githubusercontent.com/100538982/164943162-f410ade5-4300-4888-8309-2d79ebf6e541.png)
 
-Having saved our reverse-shell code we navigate to to the web site IP address:  http://[IP Address/]
+Having saved our reverse-shell code we navigate to to the web site IP address via the browser:  http://[IP Address/]
 
 ![web page](https://user-images.githubusercontent.com/100538982/164943641-e183a488-beb6-460d-bf66-afbce237bda6.png)
 
-Appending the hidden sub-directory we found earlier to the IP Address we discover there is an upload function for documents to this web server. Using "browse" we can locate our shell file on the attack machine, and upload it to the target. If the upload doesn't work first time, then maybe try a different file extension for the reverse-shell file... 
+Appending the hidden sub-directory (/panel) to the IP Address we discover there is an upload function for documents to this web server. Using "browse" we can locate our shell file on the attack machine, and upload it to the target. If the upload doesn't work first time, then maybe try a different file extension for the reverse-shell file... 
 
 ![panel upload](https://user-images.githubusercontent.com/100538982/164943710-6a79e564-64fb-4f5e-bbad-9aca31f3eea7.png)
 
@@ -74,7 +74,7 @@ Prior to executing our payload to get a reverse shell, we first need to set up a
 
     ~# nc -lnvp [port]
 
-I used the default port in the code "1234". Navigating to http://[IP Address/uploads/] from the browser, click on the shell file to run the code. This should establish the shell with a prompt: **"$"**. To further test the shell:
+I used the default port in the reverse-shell code: "1234". Navigating to http://[IP Address/uploads/] from the browser, click on the shell file to run the code. This should establish the shell with a prompt: **"$"**. To further test the shell:
 
 ![get shell](https://user-images.githubusercontent.com/100538982/164944149-f0f1c4c3-6237-4057-9eb1-a216b3cb9ec6.png)
 
@@ -91,6 +91,8 @@ Finding the first flag can be achieved either by conducting a search using the "
 
   **Now that we have a shell, let's escalate our privileges to root.**
   
+  To escalate to root privileges use the find command:
+  
       ~#find / -user root -perm 4000 -exec ls -ldb {}, > /tmp/suidout.txt
       ~#cat /tmp/suidout.txt
 
@@ -100,7 +102,9 @@ Finding the first flag can be achieved either by conducting a search using the "
   
  <img width="412" alt="suidbit" src="https://user-images.githubusercontent.com/100538982/164944910-c1b8da5a-fb82-4a8b-851d-96096c5849da.png">
 
- Having identified some usr/bin files with the SUID bit set conduct a search on on gtfobins to find a method of escalating privileges from this directory. 
+ Having identified some usr/bin files with the SUID bit set conduct a search at the gtfobins git page to find a method of escalating privileges from this directory.
+ 
+    ~#cd /usr/bin
  
   *Q. Find a form to escalate your privileges*
   
@@ -112,10 +116,17 @@ Finding the first flag can be achieved either by conducting a search using the "
   
   ![escalation](https://user-images.githubusercontent.com/100538982/164945147-0a1f6b8e-8fbe-4590-892e-1c53c26b1052.png)
 
+Either run a search for root.txt using find or manually trawl to find the flag...
 
   *Q. root.txt*
   
    *A.*
   
 ![rootflag](https://user-images.githubusercontent.com/100538982/164945154-7b5faee0-71cb-4156-adc4-07b30f50afdc.png)
+
+Congratulations on finding the flag!!!!!!
+
+I hope you enjoyed this CTF write-up. It's my first attempt at compliling a walk-through for a "Capture the Flag!".
+
+I can be found on Twiiter at: https://twitter.com/CyberRo0kie
 
