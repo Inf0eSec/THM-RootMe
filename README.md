@@ -1,6 +1,6 @@
 ---
-layout:
-post:
+layout:hacker theme
+post:THM-RootMe >_
 ---
 # THM-RootMe write-up
 **CTF > RootMe Write-up**
