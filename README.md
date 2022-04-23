@@ -1,3 +1,7 @@
+---
+layout:
+post:
+---
 # THM-RootMe write-up
 **CTF > RootMe Write-up**
 
@@ -17,7 +21,7 @@ This CTF allows the player to practice their skills using several tools and tech
 
 **Task 2 - Reconnaissance**
 
-The first stage in **attack** is to gather as much information on the target through reconnaissance. Reading through the first question in this task points directly to conducting a port scan on the target machine to discover any open ports and live services running. 
+The first stage in the **attack** is to gather as much information on the target through reconnaissance. Reading through the first question this points directly to conducting a port scan on the target machine to discover any open ports and live services running. 
 
   *Q. Scan the machine, how many ports are open?*
   
@@ -35,7 +39,7 @@ The first stage in **attack** is to gather as much information on the target thr
   
   *A. SSH*
   
-  To conduct further enumeration and uncover directories on the web server let's run a Gobuster scan:
+  Conducting further enumeration to uncover the directories on this web server let's run a Gobuster scan:
   
       ~#gobuster dir -u http://[IP Address] -w /usr/share/wordlists/dirb/common.txt -x php,phtml,php3 
    
