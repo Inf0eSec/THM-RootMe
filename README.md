@@ -78,10 +78,10 @@ Prior to executing our payload to gain a reverse shell, we first need to set up 
 
 I used the default port in the reverse-shell code: "1234". Navigating to the uploads directory: http://[IP Address/uploads/] from the browser, click on the shell file to run the code. This should establish the reverse-shell with a prompt: **"$"**. To further test the shell run the following commands:
 
-  ~#whoami
+     ~#whoami
   
   
-  ~#pwd
+     ~#pwd
 
 ![get shell](https://user-images.githubusercontent.com/100538982/164944149-f0f1c4c3-6237-4057-9eb1-a216b3cb9ec6.png)
 
