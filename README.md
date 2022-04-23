@@ -76,7 +76,7 @@ Prior to executing our payload to gain a reverse shell, we first need to set up 
 
     ~# nc -lnvp [port]
 
-I used the default port in the reverse-shell code: "1234". Navigating to the uploads directory: http://[IP Address/uploads/] from the browser, click on the shell file to run the code. This should establish the reverse shell with a prompt: **"$"**. To further test the shell:
+I used the default port in the reverse-shell code: "1234". Navigating to the uploads directory: http://[IP Address/uploads/] from the browser, click on the shell file to run the code. This should establish the reverse-shell with a prompt: **"$"**. To further test the shell run the following commands:
 
   ~#whoami
   
@@ -88,6 +88,8 @@ I used the default port in the reverse-shell code: "1234". Navigating to the upl
 Finding the first flag can be achieved either by conducting a search using the "find" command or manually trawling through the directories.
 
   *Q. User.txt?*
+  
+    ~#find / -type f -name user.txt 2>/dev/null
 
 ![first flag](https://user-images.githubusercontent.com/100538982/164944425-e17e4510-0ae2-4a16-9611-922944ba2036.png)
 
