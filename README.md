@@ -136,5 +136,7 @@ Congratulations on finding the flag!!!!!!
 
 I hope you enjoyed this CTF write-up. It's my first attempt at compliling a walk-through for "Capture the Flag!".
 
+A big thankyou goes out to Reddyyz https://tryhackme.com/p/ReddyyZ for creating this room. 
+
 https://twitter.com/CyberRo0kie
 
