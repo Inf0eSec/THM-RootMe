@@ -79,6 +79,8 @@ Prior to executing our payload to gain a reverse shell, we first need to set up 
 I used the default port in the reverse-shell code: "1234". Navigating to the uploads directory: http://[IP Address/uploads/] from the browser, click on the shell file to run the code. This should establish the reverse shell with a prompt: **"$"**. To further test the shell:
 
   ~#whoami
+  
+  
   ~#pwd
 
 ![get shell](https://user-images.githubusercontent.com/100538982/164944149-f0f1c4c3-6237-4057-9eb1-a216b3cb9ec6.png)
@@ -105,9 +107,8 @@ Finding the first flag can be achieved either by conducting a search using the "
   
  <img width="412" alt="suidbit" src="https://user-images.githubusercontent.com/100538982/164944910-c1b8da5a-fb82-4a8b-851d-96096c5849da.png">
 
- Having identified some usr/bin files with the SUID bit set conduct a search at the gtfobins git page to find a method of escalating privileges from this directory.
+ Having identified some usr/bin files with the SUID bit set, conduct a search at the gtfobins github page to find a method of escalating privileges from this directory.
  
-    ~#cd /usr/bin
  
   *Q. Find a form to escalate your privileges*
   
@@ -115,11 +116,15 @@ Finding the first flag can be achieved either by conducting a search using the "
   
   ![gtfobins](https://user-images.githubusercontent.com/100538982/164945069-8e976c50-37c0-4640-b22b-63fa51efbe2e.png)
   
-  Run the command from gtfobins to escalate privileges:
+  
+   ~#cd /usr/bin
+   
+  
+  Run the command found on gtfobins to escalate privileges:
   
   ![escalation](https://user-images.githubusercontent.com/100538982/164945147-0a1f6b8e-8fbe-4590-892e-1c53c26b1052.png)
 
-Either run a search for root.txt using find or manually trawl to find the flag...
+Either run a search for root.txt using "find" or manually trawl to find the flag...
 
   *Q. root.txt*
   
@@ -129,7 +134,7 @@ Either run a search for root.txt using find or manually trawl to find the flag..
 
 Congratulations on finding the flag!!!!!!
 
-I hope you enjoyed this CTF write-up. It's my first attempt at compliling a walk-through for a "Capture the Flag!".
+I hope you enjoyed this CTF write-up. It's my first attempt at compliling a walk-through for "Capture the Flag!".
 
-I can be found on Twiiter at: https://twitter.com/CyberRo0kie
+https://twitter.com/CyberRo0kie
 
